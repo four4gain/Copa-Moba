@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-color: #121214;
+    background-image: url(./assets/bg.svg);                         /* EIXO Y VERTICAL = EIXO X HORIZONTAL */
+    background-position-x: center;                                  
+    background-position-y: -715px;
+}
+
+#app {
+    border: 1px;
+    width: fit-content;                                                     /*ENCAIXE O CONTEUDO*/
+    margin: 52px auto;
+}
+
+header {
+    margin-bottom: 63px;
+    text-align: center;
+}
+
+#cards {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.card {
+    padding: 32px 30px;
+    text-align: center;
+    background: #1d1c19;
+    border-bottom: 2px solid #f7dd43;
+    border-radius: 6px
+    ;
+}
+
+.card h2 {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+
+
+    padding: 8px 16px;
+    border: 1px solid #746615;
+    border-radius:  6px;
+
+    width: fit-content;
+    margin-inline: auto;
+    margin-bottom: 53px;
+    
+    color: #f7dd43;
+}
+
+.card h2 span {
+    color: #e1e1e6;
+    font-size: 14px; /* tamanho da fonte*/
+    text-transform: uppercase; /*uppercase significa tudo maiusculo*/
+    
+}
+body * {
+    font-family: 'Roboto', sans-serif;
+}
+
+.card ul li {
+    display: flex;  /*desbloquear as propriedades*/
+    align-items: center;
+    justify-content: space-between; /*Espaço entre os elementos*/
+    gap: 20px;
+    
+} 
+.card ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /*espaço entre cada um dos elementos*/
+}
+.card ul li + li {
+    padding-top: 24px;
+    border-top: 1px solid #323238;
+    
+
+
+}
+.card ul li strong {
+    font-weight: 750;
+    font-size: 30px;
+    line-height: 125%;
+
+    color: #e1e1e6;
+}
+.card h2:hover,
+.card ul li strong:hover,
+.card ul li img:hover {
+    transform: scale(1.1);                                      /* O HOVER SIGNIFICA QUE QUANDO PASSAR O CURSOR EM CIMA SERÁ INTERPRETADO*/
+                                                                    /*A TAG TRANSFORM:SCALE É PARA DAR ANIMAÇÃO AO PASSAR DO CURSOR EM CIMA DO ITEM/OBJETO/TEXTO*/
+}   
+
+.card h2
+.card ul li strong,
+.card ul li img {
+    transition: transform 0.3s;
+}
+
+.card {
+    opacity: 0;
+    animation: appear 2s forwards;
+}
+/*
+.card:nth-child(1) {
+    animation-delay: 0s;
+}                                   /* TAG PARA ANIMAÇÃO NO CSS
+
+.card:nth-child(2) {
+    animation-delay: 0.8s;
+}
+
+.card:nth-child(3){
+    animation-delay: 1.6s;
+} */
+@keyframes appear {                                     /*KEY FRAMES PARA DAR ANIMAÇÃO */
+    
+    0% {
+        transform: translateY(-50px);  /* (Y) É O EIXO QUE VEM DA HORIZONTAL*/
+            opacity: 0;
+    }
+
+    100% {
+        opacity: 3;
+
+    }
+}
+
+
+
+
+            /*A VIRGULHA SIGNIFICA QUE ESTOU AGRUPANDO DOIS SELETORES PARA RECEBEREM AS MESMAS COISA*/
+
+
+
+
+
+
+                                        /*HTML É A ESTRUTURA, CSS É A BELEZA, JAVASCRIPT É A INTELIGENCIA!*/
+
+       /* PORQUE JAVASCRIPT? PORQUE ELE DESENVOLVE APLICATIVOS PARA WEB, DESKTOP E MOBILE, Temos o ELECTRON PARA DESKTOP E REACT NATIVE que são Frameworks, no caso BIBLIOTECA*/
